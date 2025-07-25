@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website with Login & Signup Form | The Blue Officemall</title>
+        <!--Google Fonts Link For Icons-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="menu-btn material-symbols-rounded">menu</span>
+                <a href="#" class="logo">
+                    <img src="Images/The Blue Logo.png" alt="logo">
+                </a>
+                <ul class="links">
+                    <span class="close-btn material-symbols-rounded">close</span>
+                    <li><a aria-label="Link para o Home do site" href="#">Home</a></li>
+                    <li><a aria-label="Link para a aba portifólio" href="#">Portifólio</a></li>
+                    <li><a aria-label="Link para a aba das lojas" href="#">Lojas</a></li>
+                    <li><a aria-label="Link sobre nós" href="#">Sobre Nós</a></li>
+                    <li><a aria-label="Link para Contato" href="#">Contato</a></li>
+                </ul>
+                <button aria-label="Abre formulário de LOG IN" class="login-btn">LOG IN</button>
+            </nav>
+        </header>
+        <!--Popup Form-->
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">close</span>
+            <div role="dialog" class="form-box login">
+                <div class="form-details">
+                </div>
+                <div class="form-content">
+                    <h2>LOGIN</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" aria-label="Email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input aria-label="Senha" type="password" required>
+                            <label>Senha</label>
+                        </div>
+                        <a aria-label="Link para aba de recuperação de senha" href="#" class="forgot-pass">Esqueceu a senha?</a>
+                        <button aria-label="Envia formulário de Log in" type="submit">Log In</button>
+                    </form>
+                    <div class="bottom-link">
+                        Não possui uma conta?
+                        <a aria-label="Link abre fomrilário de Sign Up" href="#" id="signup-link">Criar Conta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="form-details">
+                </div>
+                <div class="form-content">
+                    <h2>Criar Conta</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Insira o seu Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Crie a sua senha</label>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy"></input>
+                            <label for="policy">
+                                Eu concordo
+                                <a aria-label="Link abre aba dos Termos e Condições" href="#"> Termos & Condições</a>
+                            </label>
+                        </div>
+                        <button aria-label="Envia formulário de Sign Up" type="submit">Sign Up</button>
+                    </form>
+                    <div class="bottom-link">
+                        Já possui uma conta?
+                        <a aria-label="Link abre aba para Login In" href="#" id="login-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
