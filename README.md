@@ -1,5 +1,5 @@
-README
-🚀 Front-End Project Portfolio
+
+# 🚀 Front-End Project Portfolio
 
 Hello, and a warm welcome! 👋
 My name is Maria Eduarda, and I am a passionate enthusiast of the world of technology. I am beginning my journey as a front-end developer, dedicatedly exploring the possibilities of HTML, CSS, and JavaScript.
