@@ -10,7 +10,7 @@ Here you will find my practical projects that demonstrate this constant evolutio
 
 Feel free to browse and get to know my work! I am always open to constructive opinions and feedback that can help in my development. ✨
 
-Contact 💬
+### Contact 💬
 Shall we talk?
 
 - *LinkedIn*: www.linkedin.com/in/mariaeduardatdev 
