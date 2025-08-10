@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    overflow: hidden;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+    background-color: black;
+    background-attachment: fixed
+    ;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Add animated stars*/
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color:  #fff;
+    animation: twinkle 2s infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes twinkle{
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.navber {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+.navber img{
+    width: 50px;
+    animation: rotateIn 1s ease-in-out;
+}
+
+.navber .center-nav a,
+.social a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.navber .center-nav a:first-child {
+    color: rgb(197, 166, 85);
+}
+
+.navber .center-nav a:hover,
+.social a:hover{
+    color: rgb(197, 166, 85);
+    text-shadow: 0px 0px 30px rgb(197, 166, 85);
+}
+
+
+
+/* New Style for undrline effect*/
+
+.navber .center-nav a{
+    position: relative;
+    text-decoration: none;
+}
+
+.navber .center-nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(197, 166, 85);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navber .center-nav A:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+.text {
+    position: relative;
+    top: 10rem;
+    left: 11rem;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+.text h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    color: white;
+    border: 2px solid;
+    position: relative;
+    top: 3rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+
+
+.text .btn:hover {
+    background-color: rgb(197, 166, 85);
+    box-shadow: 0 0 10px 2px rgb(255, 140, 0);
+}
+
+.text p {
+    width: 46%;
+    animation: fadeInUp 1s ease-in-out 1s backwards;
+}
+
+.porsches {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    animation: slideInFromBottom 1s ease-in-out 1.5s backwards;
+}
+
+
+.porsches img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-in-out 2s backwards;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.porsches img:hover {               
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); 
+}
+
+
+
+.porsche-toggle img {
+    position: absolute;
+    width: 38%;
+    height: 74%;
+    right: 47px;
+    top: 7rem;
+    filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.6));
+    transition: opacity 400ms ease;
+    opacity: 1;
+    display: block;
+}
+
+.porsches,
+.porsche-toggle {
+    display: flex;
+}
+
+.porsche-toggle img.fade-out {
+    opacity: 0;
+}
+
+.porsche-toggle img.hidden {
+  opacity: 0;
+}
+
+
+.porsche-toggle img.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes rotateIn {
+    from {
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
